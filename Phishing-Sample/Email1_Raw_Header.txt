@@ -1,0 +1,116 @@
+Delivered-To: sohambhandarkar2005@gmail.com
+Received: by 2002:a05:6504:308e:b0:2ff:5b21:14ae with SMTP id n14csp1841968ltc; Sat, 23 May 2026 10:32:56 -0700 (PDT)
+X-Received: by 2002:a17:90b:3dcd:b0:368:7536:b5b7 with SMTP id 98e67ed59e1d1-36a677fce68mr8435812a91.16.1779557576713; Sat, 23 May 2026 10:32:56 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1779557576; cv=pass; d=google.com; s=arc-20240605; b=HhbFpna0YuQ+/E8UAERnz8jZuYVwhQZ3w4CkiygQb1tkWHy6jr8zdVwkiRu5CJNJH+ M4lJUuUOCci0T6dZdFkcNpU2mYpY4ZjRlnhYvA3aNDAApUpWfE7nb6BswivwtK7abT5j CXso1LoQCHKYz1CyUfpwDsFfiWUtytsUmWSwBycuWmnCrMleeDzC0sYfqANVH86k32UB 09/atfDbzeBokeZkX7AeE+jjbBWjZ7mvgZPSBsVNttIqfm9J3x/1QbgkSL/sD0jtMs7B nzLnsg/I2ppxCBWBsgKgXaI21uOik2HA+k4PkgKndrIz1kEKsYzgkEbB9t/qeb6ATX+I aYXg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605; h=to:subject:message-id:date:from:sender:mime-version:dkim-signature; bh=PZcedBuWidEj8yuPrEtjIyscfsbnHePudQFbsbgN8dg=; fh=33evxRSpCo8hf+leoWSyunBXWXNpXEEmBMIjW67W0UY=; b=QbWoIuZdy4f1rAES93RJbhJJdxjEhEA6pQdpcJLGDhly9AwN/GSIXtud79K4j6VRpm 45eOkbzv1U+SofQ2xNbBDRZqqLVAoUzELwAvwcGTdNDb8skDMkhCkC5XiAJkkRPDs5RQ 0gBW/QiMDuhWmdIf4eCiO2KGcmsU+RMclA6xjvHWj+k0TOnjORPTbl9tEv1hSyv/noYT MsFe2sEhLh+Vp1hClmSR05qJssvLncAvhQF6sgBh51YmQg/pfnAc5vyTO0bEFE9l8q9q w/8RkUXiCB4RgjN9QcY+VyUexOQFdtxrcezwmEnRf067RRn0hN0WfhsG25wvcbcD5T84 A0QA==; dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com; dkim=pass header.i=@klh.edu.in header.s=google header.b=IN43gM9V; arc=pass (i=1); spf=pass (google.com: domain of 2320520055@klh.edu.in designates 209.85.220.65 as permitted sender) smtp.mailfrom=2320520055@klh.edu.in; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=klh.edu.in; dara=pass header.i=@gmail.com
+Return-Path: <2320520055@klh.edu.in>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65]) by mx.google.com with SMTPS id 41be03b00d2f7-c85205acf84sor1174074a12.10.2026.05.23.10.32.56 for <sohambhandarkar2005@gmail.com> (Google Transport Security); Sat, 23 May 2026 10:32:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 2320520055@klh.edu.in designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com; dkim=pass header.i=@klh.edu.in header.s=google header.b=IN43gM9V; arc=pass (i=1); spf=pass (google.com: domain of 2320520055@klh.edu.in designates 209.85.220.65 as permitted sender) smtp.mailfrom=2320520055@klh.edu.in; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=klh.edu.in; dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1779557576; cv=none; d=google.com; s=arc-20240605; b=BltbBnDkBwQkyNyF7UlhJDBkabtrOS24p9w1ypVniJpRYqBhQuU8wAKXBI6oYCxFKh stichTh84utIjy6+zZ9+C2eqp1Fpue+neJFv2NIwVrpHjpODYnf4B2uhRHh3eSm0INlu VZ852WbK12IdBa42iHznjqrw0OrUX7XQB2i0vfvll+ycYs8zm9+ZiiW4MPgvoyVspIKH ZyAlt9qJDdpexyv/2MXBayz3kEGPuobpTQb3wDbCTi0+FMNTumEhJY1zkycpF/Tc0dyP ZNw5O24URxh72n1IR2VYHwUng25uh1i9wmmLvMz3ngTbQAufZYQ1uXqqYaFgQtqN3Lam ik0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605; h=to:subject:message-id:date:from:sender:mime-version:dkim-signature; bh=PZcedBuWidEj8yuPrEtjIyscfsbnHePudQFbsbgN8dg=; fh=33evxRSpCo8hf+leoWSyunBXWXNpXEEmBMIjW67W0UY=; b=OwoNsz5bKq4al2LcSZg9EGNHaCpaoYzWw/Fux9ai3hSC+Wz6LBlzGfvPsUZpkHUFzz BTR7cN+VCu/MyqT0NAs7CIjggaeMQ5riGkNmAWmFNkaz6dDYiFLuIUOHcG8o/4PpICHz d5PJLH7r4if7tB5uPty+hz6cEgK/mg8oiKBe1G0pSHD7zukMVVs+uPFlaz60tgC6smsP UUvgA8iIB/+a4GTokuqzOq8S7t6pg+TbatgtGyu3sOwuFGjE8xDIfykuUdGQ+9MNameQ f1qhTaL56boJ1YBBsvlt25rRt+OLjTrruDgRCUwdqc/jVI9rC7Gm3oUL83MLrbe/f9fH d0Mw==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=klh.edu.in; s=google; t=1779557576; x=1780162376; dara=google.com; h=to:subject:message-id:date:from:sender:mime-version:from:to:cc :subject:date:message-id:reply-to; bh=PZcedBuWidEj8yuPrEtjIyscfsbnHePudQFbsbgN8dg=; b=IN43gM9Vf/YvG5puIpb2hEpwoGBJVkM38Ho79vvBVzTQFBYMOB5fLlTqHDix/95+u8 fAhCnRp5fynYTxhJn63AciukvoX4tcDyBBUAZuMKJlF5FLh2EG6uY3RK/xChA7ncX+8+ U7jFq4+ccDRq73povnsVA0wrt5xP3Ac6wcK3DHfU2GP9RnOs7mn4VUh4hyPKEOQ1Ry9D NFuuCLk76Zq0vSQ/WKLARGiPk+shzbZl0UxrKBujbLkqtJAO8EEFJFGstXkYAYT2K8Nq iNHWZyl6jt6ic4cd5s7jCe1ayI3bQ28gGYYRtIFE5uwsLMdYDdmiSbFo7zdPVkOqdpH3 xWtg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20251104; t=1779557576; x=1780162376; h=to:subject:message-id:date:from:sender:mime-version:x-gm-gg :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to; bh=PZcedBuWidEj8yuPrEtjIyscfsbnHePudQFbsbgN8dg=; b=NXD0sr6NAtO0ox8P1VxhfxIia6s8tLGdc0nDTU3qOWt2EztJXxYSNb/ADQTkL4USud quM4ZmgKGvb+daGjHLyY7gnlptHuYgLy1KsrawAsa7nIS3JWe2prHmE6UowdYVwB+U/S u8cK3FP9HTvcTsFX7z6cqtOdIbf+QxMK27bihCOuST9q7ttxoD1drst1G5ek2TKD1MRH qFqag08IWM5JlO92Nit0TZ3JMff/EAx0517WPq6B5h2rh00nXMi2i/KZDgYQ9a9hB0pg uhg+pXHNgGV0CXVqzUStUfgAA2Ye82nZGrXV7wJFPhkpev4o/RXVX04OWmXkV24s2dXr PSPg==
+X-Gm-Message-State: AOJu0YxNw7rnWcUYdHSCoW8vvV8d6tF/NFvvuvhD+iAkogfVQXLn3NNo Uaiuq+osBPEssmvNEggUc7jnNCi7OoKpRdg/tKSDs7ZbGQ5J3gxXC+E1bpF381cs55FmYzhXUaZ IDANq87bJmTiG/g8SekWILC4f5IKIMLh53s80zIBzWAXVADicMeyld7cFiP9NE8szGCnczPYkZY 5ewPqSE/+Uyxi5cvOsuhhZJ4NhvMnPk3nJ41rfs9XqnJloO5lslDsWVA==
+X-Gm-Gg: Acq92OHwXIdPEBQKhHIvx16qCUpGSKP9qfl9YL8Um2WLefcrFgKzHIDo36SRMD6ravh vdRLgl0nVPlyE1HxxvdYhSObTTTQn93PvuurO2UQqUmRuLNyQvxAzWT5ebjRkiOYm44tigIBpyG c1R7kJ5mTT8tehEt+0cnMoKylony7+zVmMVoOz9v6r1Bz23UsPUPhXuEbKZYZ+ctrlRLYT2iHIT oFLCIvuQRAVRW7BwTRvraeOUyxLiHo7wXOULhqhvC9RMnX4ONZYsGMOLh1/nmTPrjLfqoFgCvRT jXbUB1Q=
+X-Received: by 2002:a05:6a20:d708:b0:3a2:f14a:4277 with SMTP id adf61e73a8af0-3b328edeb39mr9398533637.32.1779557575964; Sat, 23 May 2026 10:32:55 -0700 (PDT)
+Received: from 739537965702 named unknown by gmailapi.google.com with HTTPREST; Sat, 23 May 2026 13:32:55 -0400
+Received: from 739537965702 named unknown by gmailapi.google.com with HTTPREST; Sat, 23 May 2026 13:32:55 -0400
+MIME-Version: 1.0
+Sender: 2320520055@klh.edu.in
+From: 2320520055@klh.edu.in
+Date: Sat, 23 May 2026 13:32:55 -0400
+X-Google-Sender-Auth: 7XkyxqKf9hxGlzDHYCq_qjJf56M
+X-Gm-Features: AVHnY4J2uYDZPTLkKMEE61BdUbNULhqWULY3kS-v6H9hbJwRSAgHqeInmw1xaM0
+Message-ID: <CAF5jOJ2=jnhGrO9KCmEvcqjPSvuwLhD7G-sUzV4W7tHYAVt8Xw@mail.gmail.com>
+Subject: Apply For Summer Internship and Placement Mentorship Program for - SVKM IOT DHULE
+To: sohambhandarkar2005@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000002c4d1a06527f8927"
+
+--0000000000002c4d1a06527f8927
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Dear SOHAM ANIL BHANDARKAR,*
+We=E2=80=99re reaching out to inform you about an internship opportunity av=
+ailable
+for students.
+
+This program is designed to help students gain practical exposure, work on
+real-time projects, and improve their readiness for placements.
+
+*What the program includes:*
+
+   - Online learning sessions with mentor support
+   - Hands-on project experience
+   - Guidance on resume building and interview preparation
+
+*What you will receive:*
+
+   - Training certificate
+   - Internship completion certificate
+   - Opportunity to work on industry-level projects
+   - Basic placement support and guidance
+
+If you=E2=80=99re interested, you can apply using the link below:
+
+Apply here:
+*Click here to APPLY
+<https://docs.google.com/forms/d/e/1FAIpQLSeiNTIWv3Pu1mWR62TNVFluEMMkvZZXlM=
+K1iGDkIG6ini5BTg/viewform?usp=3Dheader>**Referral
+Code: MDS@16**.*
+
+After applying, selected students will be contacted with further details.
+
+If you have any questions, feel free to reply to this email.
+
+Regards,
+Campus Program Team
+
+--=20
+
+
+www.klh.edu.in <http://www.klh.edu.in>
+
+--0000000000002c4d1a06527f8927
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><p style=3D"font-size:13px;margin:0px;fon=
+t-variant-numeric:normal;font-variant-east-asian:normal;font-variant-altern=
+ates:normal;font-size-adjust:none;font-kerning:auto;font-feature-settings:n=
+ormal;line-height:normal;font-family:&quot;Helvetica Neue&quot;"><font colo=
+r=3D"#000000"><b>Dear=C2=A0SOHAM ANIL BHANDARKAR,<br></b></font><span style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-size:small"><br>We=E2=80=99=
+re reaching out to inform you about an internship opportunity available for=
+ students.</span><font color=3D"#000000"><b><br></b></font></p><p>This prog=
+ram is designed to help students gain practical exposure, work on real-time=
+ projects, and improve their readiness for placements.</p><p><strong>What t=
+he program includes:</strong></p><ul><li style=3D"margin-left:15px">Online =
+learning sessions with mentor support</li><li style=3D"margin-left:15px">Ha=
+nds-on project experience</li><li style=3D"margin-left:15px">Guidance on re=
+sume building and interview preparation</li></ul><p><strong>What you will r=
+eceive:</strong></p><ul><li style=3D"margin-left:15px">Training certificate=
+</li><li style=3D"margin-left:15px">Internship completion certificate</li><=
+li style=3D"margin-left:15px">Opportunity to work on industry-level project=
+s</li><li style=3D"margin-left:15px">Basic placement support and guidance</=
+li></ul><p>If you=E2=80=99re interested, you can apply using the link below=
+:</p><p>Apply here:=C2=A0<b style=3D"font-family:&quot;Helvetica Neue&quot;=
+"><font size=3D"4" style=3D"color:rgb(0,0,0)">=C2=A0</font></b><b style=3D"=
+font-family:&quot;Helvetica Neue&quot;"><font size=3D"4" style=3D"color:rgb=
+(0,0,0)"><a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSeiNTIWv3Pu1mW=
+R62TNVFluEMMkvZZXlMK1iGDkIG6ini5BTg/viewform?usp=3Dheader" target=3D"_blank=
+">Click here to APPLY</a><br></font></b><span style=3D"background-color:rgb=
+(255,255,0)"><b>Referral Code: MDS@16</b></span><span style=3D"background-c=
+olor:rgb(255,255,0)"><b>.</b></span></p><p>After applying, selected student=
+s will be contacted with further details.</p><p>If you have any questions, =
+feel free to reply to this email.</p><p>Regards,<br>Campus Program Team</p>=
+</div>
+</div>
+
+<br>
+<div><br></div><a href=3D"http://www.klh.edu.in" target=3D"_blank">www.klh.=
+edu.in</a>
+--0000000000002c4d1a06527f8927--

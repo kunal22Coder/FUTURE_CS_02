@@ -1,0 +1,86 @@
+Delivered-To: prashantkhare729@gmail.com
+Received: by 2002:a05:6f02:4082:b0:112:eacd:6730 with SMTP id m2csp980566rcd;
+        Mon, 5 Jan 2026 11:05:25 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHW69tf5eBJt07MUrUeslKSbboJJxxtqPUBsD/g88y5/Dk2e+ovhIzc8lF55wkhTGeouccN
+X-Received: by 2002:a05:622a:4d8d:b0:4ff:7f44:4d1b with SMTP id d75a77b69052e-4ffa843956dmr3268251cf.14.1767639925260;
+        Mon, 05 Jan 2026 11:05:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767639925; cv=none;
+        d=google.com; s=arc-20240605;
+        b=hsxdjmwNyuUsBljzJbgcij2NnBh6iRUKBmrfX6GLAYVQsifiGYCCzijW6Qx4cTHCNB
+         0h5CEg4IAEwAyNkR1dQ8xDQUsVOO0rsRlfxb7foJ4UrcV05fAwfTRNycu32zggWBi8x9
+         kx7G5KXfCwiN7TtTSisbZSkTmQVJ/haezPQqBwj922OMOrAHiI/MRm7L80QoHPLxTk84
+         zPm52YjaO8RfieFXmaauE0vVLel4OzxsVkdIAdfp5QKZPIpWlEPUtN84aGR6n4sgmLj1
+         0K7MXNyU/rYhUy2jTZE61/MTSFnqTCXhCLXQRJeAwzl7nlZbNvYgum/+aoJtJSwpde/i
+         eG4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:feedback-id:to:message-id
+         :subject:date:from:dkim-signature:dkim-signature;
+        bh=pB5jxJms8m9sBb7YlQ5FnXmZQV1jD4KGCAEUXwHZTXY=;
+        fh=DF/58s4HzMYrlZxaJsyjKMOYB/Fe45Aj5JuyUDJSHyQ=;
+        b=cK9hy49Fiukco6ix9LPFMfzkVw9d59FeF6HyPzeElQNVI/axz6Hw6mXVEqcQwJ3Hz3
+         +CN2ZA7gacRNQFYsbBgY0w/zxVqn79/jicgRyIRI06o46AG+Ig69bOybLf+/yETnaKmb
+         CoMah1UZOOJHCL9IsqDAFG8gX+QmzV1MfD6/D3Q3Rs0m5jqcXcL5fb5o4i9b+/G9WnoT
+         xUQOa3NgTXdqe8a3d3x/t+RTtX6hf3GSgEhI6fFCwP0/wTm2eVIfCBAF9cpjWW4EMwbw
+         6KrMVjDmFHsKP6stWR1MLN9SX8lEseyDRcls9EQ+5P8yCbRIBoMkWSz5reY3j1Rpj3m+
+         m+Yg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm20250324 header.b=ebHRIhQs;
+       dkim=pass header.i=@sendotp.co header.s=20250106070938pm header.b=nALeGAo3;
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.sendotp.co designates 50.31.156.117 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.sendotp.co
+Return-Path: <pm_bounces@pm-bounces.sendotp.co>
+Received: from sc-ord-mta117.mtasv.net (sc-ord-mta117.mtasv.net. [50.31.156.117])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ffa7188d51si8868891cf.200.2026.01.05.11.05.24
+        for <prashantkhare729@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 05 Jan 2026 11:05:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of pm_bounces@pm-bounces.sendotp.co designates 50.31.156.117 as permitted sender) client-ip=50.31.156.117;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm20250324 header.b=ebHRIhQs;
+       dkim=pass header.i=@sendotp.co header.s=20250106070938pm header.b=nALeGAo3;
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.sendotp.co designates 50.31.156.117 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.sendotp.co
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=pm20250324; d=pm.mtasv.net;
+ h=From:Date:Subject:Message-Id:To:Feedback-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Date:From:Message-ID:Reply-To:Sender:Subject:To:CC;
+ t=1767639925; x=1767726325;
+ bh=pB5jxJms8m9sBb7YlQ5FnXmZQV1jD4KGCAEUXwHZTXY=;
+ b=ebHRIhQskfMEi0y5VlQM7wHkR+GScqhNO0iz+K0Qphaje8SK/kAHbt4oPnglemSDM+NslGTm85jw
+   Hx39gEv8++YH1zyu6m71v0IBWc45aeVLNo6s5olcyH5x5kM9eCJAquDbZGoP4LW1fgK+FSYkljr+
+   q1/nS5cRsoMcMnKAgQDOSG5KYeDos/hbw1Z/eJi2x4k8crlcURms1vsH+lvA9xEVr06HOzicxV0Q
+   xO8hsEXGP41bK929l+84vjcNskdUjRQLE5R8u59HWLary5QpG/Dmn1TVXjG2OQYy4aOOCkNn2iUf
+   3aLHH9rCZYAleYPrgERSkIjLn26SB6rRyjSXHQ==
+Received: by sc-ord-mta117.mtasv.net id hbg5n83b84k0 for <prashantkhare729@gmail.com>; Mon, 5 Jan 2026 14:05:24 -0500 (envelope-from <pm_bounces@pm-bounces.sendotp.co>)
+X-PM-IP: 50.31.156.117
+X-IADB-IP: 50.31.156.117
+X-IADB-IP-REVERSE: 117.156.31.50
+DKIM-Signature: v=1; a=rsa-sha256; d=sendotp.co; s=20250106070938pm;
+	c=relaxed/relaxed; i=sendotp@sendotp.co; t=1767639924; x=1767812724;
+	h=date:date:from:from:message-id:reply-to:sender:subject:subject:to:to:cc:
+	feedback-id:mime-version:content-type:content-transfer-encoding;
+	bh=pB5jxJms8m9sBb7YlQ5FnXmZQV1jD4KGCAEUXwHZTXY=;
+	b=nALeGAo3o4/N4y9Itz9QusyNGxHovxNsm/DtM9gi5NztE7ZQ6GD9obFuUhFcQugDXBMnqQdf0tZ
+	Gsyey/ZzOdQqM95fbrFijR89frDb9/TPZa2uLMt7ZdMRNJVFwFOwSeyWn5eb0fHMs+nIbNeKNndPM
+	BdU/BSlX9cGirDPQm9s=
+From: sendotp@sendotp.co
+Date: Mon, 05 Jan 2026 19:05:23 +0000
+Subject: Payment Reminder
+Message-Id: <c7be0d6b-efd2-4261-b8f4-9bb45b942984@mtasv.net>
+To: prashantkhare729@gmail.com
+Feedback-ID: s13617436-_:s13617436:a325022:postmark
+X-Complaints-To: abuse@postmarkapp.com
+X-PM-Message-Id: c7be0d6b-efd2-4261-b8f4-9bb45b942984
+X-PM-RCPT: |bTB8MzI1MDIyfDEzNjE3NDM2fHByYXNoYW50a2hhcmU3MjlAZ21haWwuY29t|
+X-PM-Message-Options: v1;1.zRf-Vb1nVESXeVG8MN7PuA.2hStYAOcDU8OXnXeOd93KqezUF10KgmBFLKy_xbNEIcfTZMd1D-fE6va8tbzcyW9GL-UHSG7YEfXPQ1XNAA-GnMe4XldAUP8fqEKdUjqFPGKh4FDBuU_oK0fmjLLr8m7_0ODWpvlb0R5kdddNnw2TDIp9prkXkGXiaQiopYYQwJsZF7tDlKBfiMpaEeKNgUy
+MIME-Version: 1.0
+X-PM-MTA-Pool: transactional-1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+    Dear Student,<br>=20
+    Thank you for showing interest.<br>
+    Here are the details:<br>
+    Purchase Link: https://razorpay.live/p/639923P2I6<br>
+    Product Name: BANKING MEGA TEST SERIES<br>
+    By: Ignite247<br>
+    Thanks
